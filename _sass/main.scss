@@ -1,3 +1,105 @@
-.current {
-    color: green;
+// .current {
+//     color: green;
+// }
+
+%link-text {
+    height:100%;
+    display:inline-block;
+    vertical-align: middle;
 }
+
+$border-width: 2px;
+$border-style: solid;
+$border-color: black;
+$font-stack: adobe-garamond-pro, serif;
+$font-weight: 800;
+$font-style: normal;
+
+body {
+    margin: 0px;
+    // background-color: #fffff3;
+    font-family: $font-stack;
+    font-weight: $font-weight;
+    font-style: $font-style;
+}
+
+.flex-item {
+    flex: 1;
+}
+
+
+.container{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    flex-basis: 20%;
+}
+
+.container-flex {
+    flex-basis: 80%;
+    display: flex;
+    font-size: 10vh;
+}
+
+.flex-column {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pane {
+    box-sizing: border-box;
+}
+
+.right-top-pane {
+    flex-basis: 30%;
+    border-style: $border-style;
+    border-width: $border-width 0 $border-width 0;
+
+}
+
+.right-bottom-pane {
+    flex-basis: 70%;
+}
+
+.left-pane {
+    border-style: $border-style;
+    border-width: $border-width $border-width 0 0;
+}
+
+
+
+.button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.left-button:hover {
+    background-color: #fddfdf;
+}
+
+.right-bottom-button:hover{
+    background-color: #def3fd;
+}
+
+.right-top-button:hover {
+    background-color: #fcf7de;
+}
+
+
+
+
+
+
+
+
