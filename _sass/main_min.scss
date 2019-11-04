@@ -1,0 +1,157 @@
+// .current {
+//     color: green;
+// }
+
+%link-text {
+    height:100%;
+    display:inline-block;
+    vertical-align: middle;
+}
+
+$min-height: 500px;
+
+$border-width: 2px;
+$border-style: solid;
+$border-color: black;
+
+$font-stack: 'Roboto Slab', serif;
+$font-weight: 50;
+$font-style: normal;
+
+$vertical-spacer: 20;
+
+$core-size: 100;
+$center-column-size: 100 - 2*$vertical-spacer;
+$center-size: 40;
+
+
+$name-size: 25;
+$subtitle-size: 15;
+$mini-spacer-size: 10;
+$button-size: 15;
+$link-size: 15;
+
+
+$number-buttons: 3;
+$button-width: (100 - 30) / $number-buttons;
+
+
+
+
+body {
+    margin: 0px;
+    // background-color: #fffff3;
+    font-family: $font-stack;
+    font-weight: $font-weight;
+    font-style: $font-style;
+}
+
+.flex-item {
+    flex: 1;
+}
+
+.horizontal-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container{
+    height: 100vh;
+    width: 100%;
+    min-height: $min-height;
+}
+
+
+.core {
+    flex-basis: $core-size * 1%;
+    width: 100%;
+    min-height: $min-height;
+}
+
+.vertical-spacer {
+    flex-basis: $vertical-spacer * 1%;
+    height: 100vh;
+    background-color: black;
+    min-height: $min-height;
+}
+
+.center-column {
+    height: 100vh;
+    flex-basis: $center-column-size * 1%;
+    min-width: 500px;
+    align-items: center;
+    min-height: $min-height;
+}
+
+
+.center {
+    max-height: $center-size * 1%;
+    align-items: center;
+    width: 100%;
+}
+
+.name {
+    max-height: $name-size * 1%;
+    font-size: 50px;
+    // font-size: 5vw;
+
+}
+
+.subtitle {
+    max-height: $subtitle-size * 1%;
+    font-size: 14px;
+    // font-size: 2.5vw;
+}
+
+.mini-spacer {
+    max-height: $mini-spacer-size * 1%;
+}
+
+.button-container {
+    justify-content: space-between;
+    max-height: $button-size * 1%;
+    width: 50%;
+}
+
+.button {
+    height: 100%;
+    width: $button-width * 1%;
+    min-width: 60px;
+    background-color: white;
+    outline: solid black 3px;
+    // padding: 3px 5px;
+    // font-size: 3vmin;
+}
+
+/* unvisited link */
+.button:link {
+  color: black;
+  text-decoration: none;
+}
+
+/* visited link */
+.button:visited {
+  color: black;
+}
+
+.button:hover {
+    color: white;
+    background-color: black;
+}
+
+
+
+
+
+
+
+
