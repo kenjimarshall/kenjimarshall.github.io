@@ -145,13 +145,26 @@ main{
 }
 
 
+@media(hover: none) {
+    .back-button:active {
+        color: white;
+        background: black;
+    }
+
+    .post-container .post .post-link:active {
+            font-weight: 1000;
+            color: white;
+            background: black;
+    }
+}
+
 @media(hover: hover) and (pointer: fine) {
     .back-button:hover {
         color: white;
         background: black;
     }
 
-    .post-container .post .post-link:hover{
+    .post-container .post .post-link:hover {
             font-weight: 1000;
             color: white;
             background: black;
