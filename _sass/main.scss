@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC&display=swap');
 body {
     font-family: 'Times New Roman', serif;
     margin: 0px;
@@ -41,6 +41,11 @@ main{
         margin-right: auto;
         margin-bottom: auto;
         padding: 0.3rem 0.8rem;
+    }
+
+    .back-button:active {
+        color: white;
+        background: black;
     }
 
     .title {
@@ -122,6 +127,12 @@ main{
             padding: .3rem .5rem;
         }
 
+        .post-link:active{
+            font-weight: 1000;
+            color: white;
+            background: black;
+    }
+
     }
 }
 
@@ -145,42 +156,30 @@ main{
 }
 
 
-@media(hover: none) {
-    .back-button:active {
-        color: white;
-        background: black;
-    }
+// @media(hover: none) {
+//     .header .back-button:active {
+//         color: white;
+//         background: black;
+//     }
 
-    .post-container .post .post-link:active {
-            font-weight: 1000;
-            color: white;
-            background: black;
-    }
-
-
-}
+//     .post-container .post .post-link:active{
+//             font-weight: 1000;
+//             color: white;
+//             background: black;
+//     }
+// }
 
 @media(hover: hover) and (pointer: fine) {
-   .back-button:active {
+    .header .back-button:hover {
         color: white;
         background: black;
     }
 
-    .post-container .post .post-link:active {
+    .post-container .post .post-link:hover{
             font-weight: 1000;
             color: white;
             background: black;
     }
-    // .back-button:hover {
-    //     color: white;
-    //     background: black;
-    // }
-
-    // .post-container .post .post-link:hover {
-    //         font-weight: 1000;
-    //         color: white;
-    //         background: black;
-    // }
 }
 // 450 px
 

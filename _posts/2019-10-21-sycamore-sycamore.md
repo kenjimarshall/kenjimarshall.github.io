@@ -1,4 +1,5 @@
 ---
+title: sycamore, sycamore
 layout: post
 author: ted
 parent: /writing

@@ -1,4 +1,5 @@
 ---
+title: don't die butterfly
 layout: post
 author: ted
 parent: /writing

@@ -1,4 +1,5 @@
 ---
+title: the electric man
 layout: post
 author: ted
 parent: /writing
