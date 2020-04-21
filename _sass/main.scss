@@ -1,24 +1,66 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC&display=swap');
-body {
-    font-family: 'Times New Roman', serif;
+
+body { 
+    font-family: 'Times New Roman', serif; //default font for everything
     margin: 0px;
-    background: white;
+    background: white; //background of whole website
+    // cursor: url("../images/cursor.svg") 10 10, auto !important;
 }
 
-body::-webkit-scrollbar {
+a{
+    // cursor: url("../images/cursor.svg") 10 10, auto !important;
+
+}
+
+body::-webkit-scrollbar { //so no scrollbar ever appears for whole page
     width: 0;
     height: 0;
 }
 
-main{
-    min-height: 500px;
-    min-width: 300px;
+
+.clickEffect{
+    position: fixed;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: none;
+    border: 0px solid black;
+    width: 20px;
+    height: 20px;
+    animation: clickEffect 1s ease-out;
+    -webkit-animation: clickEffect 1s ease-out;
+    z-index: 99999;
+}
+
+@keyframes clickEffect{
+    0%{
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.2;
+    }
+}
+
+@-webkit-keyframes clickEffect{
+    0%{
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+main {
     height: 100vh;
 }
 
-.container{
+
+
+.container{ //div within main
     height: 100%;
+    
 }
 
 
@@ -28,10 +70,12 @@ main{
     align-items: center;
     justify-content: flex-end;
     text-align: center;
-    height: 20%;
-    h1 {
+    height: 20%; //partition of space for header
+
+    h1 { //titles for home and sub-pages
         margin: 0;
     }
+
     .back-button {
         font-size: 1.5rem;
         text-decoration: none;
@@ -43,80 +87,248 @@ main{
         padding: 0.3rem 0.8rem;
     }
 
-    .back-button:active {
+    .back-button:hover, .back-button:active {
         color: white;
         background: black;
     }
 
-    .title {
-        font-size: 2rem;
-    }
+    
 }
 
-.core {
+
+.core-subpage{ //For subpages; has width constraints
     display: flex;
     justify-content: center;
     align-items: center;
-    height:65%;
-    .img-container {
-        width: 250px;
-        display: flex;
-        justify-content: space-between;
+    height:65%; //partition of space for core
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.core { //div to contain main content for each page
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:65%; //partition of space for core
+
+    .btn-container { //holds navigation buttons on home
+        // display: flex;
+        position: relative;
+        width: 29ch; //got through just guess and check.... doesn't really make
+        height: 50%;
+        // justify-content: space-between;
     }
 
-    .btn {
+    .btn {//naviation buttons on home
+        position: absolute;
         display: inline;
+        text-decoration: none;
+        font-family: 'Courier New', Courier, monospace; //need monospace for animation
+        text-align: center;
+        color: black;
+
+        
+
+
+
+
+        .type_button{ //styling for animation
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2.5px solid black; //add to media
+            -webkit-animation:  typed 5s steps(8);
+            animation: typed 5s steps(8);
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            width: 0ch;
+        }
     }
 
-    .eye {
-        width: 100px;
+    #left-button{
+        margin-left: 0ch;
     }
 
-    #left-eye {
-        // margin: 0 2rem 0 0;
+    #right-button{
+        margin-left: 16ch;
     }
 
-    #right-eye{
-        // margin: 0 0 0 2rem;
+    
+    
+    @-webkit-keyframes typed {
+        0% {
+            width: 0ch;
+        }
+
+        50% {
+            width: 8ch;
+        }
+
+        40% {
+            border-right: 2.5px solid white;;
+        }
+
+        
+        45% {
+            border-right:  2.5px solid black;
+        }
+
+
+        50% {
+            border-right: 2.5px solid white;;
+        }
+
+        55% {
+            border-right: 2.5px solid black;
+        }
+
+        
+        85% {
+            width: 8ch;
+        }
+
+        95%{
+            width: 0ch;
+        }
+
+        
     }
+
+    @keyframes typed {
+        0% {
+            width: 0ch;
+        }
+
+        30% {
+            width: 8ch;
+            border-right: 2.5px solid black;
+        }
+
+        38%{
+            width: 8ch;
+            border-right: 2.5px solid white;
+        }
+
+        46%{
+            width: 8ch;
+            border-right: 2.5px solid black;
+        }
+
+        54%{
+            width: 8ch;
+            border-right: 2.5px solid white;
+        }
+
+        62%{
+            width: 8ch;
+            border-right: 2.5px solid black;
+        }
+
+        70%{
+            width: 8ch;
+            border-right: 2.5px solid white;
+        }
+
+        78%{
+            width: 8ch;
+            border-right: 2.5px solid black;
+        }
+
+        86%{
+            width: 8ch;
+            border-right: 2.5px solid white;
+        }
+
+        94%{
+            width: 8ch;
+            border-right: 2.5px solid black;
+        }
+
+        
+    }
+
+    .type_button:hover{
+        font-weight: 1000;
+        color: white;
+        background: black;
+        border-right-color: black;;
+    }
+
+    
 }
 
 
 .footer {
-    // width: 100vw;
-    height: 15%;
+    height: 15%; //space partition for footer
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    flex-direction: row;
+    justify-content: flex-end; //push to right
+    align-items: center;
 
-    .logo {
-        margin: 1.5rem 1rem;
+    .dropdown{ //contains whole dropdown interface
+        display: flex;
+        align-items: center;
+        height: 50%;
     }
+
+    .drop-content{ //the actual links
+        display: none;
+        // display: flex;
+        // align-items: center;
+        height: 100%;
+    }
+
+    .drop-btn { //the control button
+        background-color: black;
+        height: 30px;
+        width: 30px;
+    }
+
+    .dropdown:hover .drop-content {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo { //animations on the actual logo
+        margin-right: 2rem;
+        height: 100%;
+
+        display:flex;
+        align-items: center;
+
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+
+      .logo:hover, .logo:active{
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px);
+      }
 
 }
 
 
-
-.post-container {
+.post-container { //holds links in subpages
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 3rem;
+    margin-top: 3rem;
     align-items: center;
     overflow-y: scroll;
-    height: 100%;
+    height: 65%;
     width: 80%;
 
     .post {
         width: 80%;
+        margin: 0.3rem 0;
+        
 
         h2 {
             text-align: center;
             font-size: 1rem;
-        }
-
-        p {
-            font-size: .7rem;
         }
 
         .post-link {
@@ -125,26 +337,46 @@ main{
             font-weight: 500;
             color: black;
             padding: .3rem .5rem;
+            
         }
 
-        .post-link:active{
+        .post-link:hover, .post-link:active{
             font-weight: 1000;
             color: white;
             background: black;
-    }
+        }
 
     }
 }
 
-.post-container::-webkit-scrollbar { /* WebKit */
-    width: none;
-    height: none;
+
+.post-container::-webkit-scrollbar{
+	width: 0px; //increase to see the styling below
+}
+
+.post-container::-webkit-scrollbar-track-piece{
+	background-color: #FFF;
+}
+
+.post-container::-webkit-scrollbar-thumb{
+	background-color: gray;
+	// outline: 2px solid #FFF;
+	outline-offset: -2px;
+    border: .1px solid gray;
+    border-radius: 100px;
+}
+
+.post-container::-webkit-scrollbar-thumb:hover{
+	background-color: black;
 }
 
 
 
 
-.prose {
+
+
+
+.prose { //text size modified in media queries
     padding-top: 1.5rem;
     padding-bottom: 4rem;
     display: flex;
@@ -156,62 +388,45 @@ main{
 }
 
 
-// @media(hover: none) {
-//     .header .back-button:active {
-//         color: white;
-//         background: black;
-//     }
-
-//     .post-container .post .post-link:active{
-//             font-weight: 1000;
-//             color: white;
-//             background: black;
-//     }
-// }
-
-@media(hover: hover) and (pointer: fine) {
-    .header .back-button:hover {
-        color: white;
-        background: black;
-    }
-
-    .post-container .post .post-link:hover{
-            font-weight: 1000;
-            color: white;
-            background: black;
-    }
-}
 // 450 px
 
+@media screen and (min-width: 300px){
+    .core .btn-container{
+        font-size: 1.1em;
+    }
+
+    // .core .btn-container {
+    //     width: 250px;
+    // }
+
+}
+
 @media screen and (min-width: 450px) {
-    .core .eye{
-        width: 150px;
+    .core .btn-container{
+        font-size: 1.8em;
     }
 
     .prose {
         font-size: 18px;
     }
 
-    .header #home-title {
-        font-size: 4rem;
+    .header .home-title {
+        font-size: 5em;
     }
 
     .header .title {
-        font-size: 2.5rem
+        font-size: 2.5em
     }
 
-    .core .img-container {
-        width: 400px;
-    }
+    // .core .btn-container {
+    //     width: 400px;
+    // }
 
     .footer {
-        justify-content: flex-end;
         padding-right: 1rem;
     }
 
-    .post-container .post {
-        padding: 0.3rem 0;
-    }
+
     .post-container .post .post-link {
         font-size: 22px;
     }
@@ -219,24 +434,24 @@ main{
 
 
 @media screen and (min-width: 700px) {
-    .core .eye{
-        width: 250px;
+    .core .btn-container{
+        font-size: 3em;
     }
 
     .prose {
         font-size: 20px;
     }
-    .header #home-title {
-        font-size: 5rem;
+    .header .home-title {
+        font-size: 6em;
     }
 
     .header .title {
-        font-size: 3rem
+        font-size: 3em
     }
 
-    .core .img-container {
-        width: 600px;
-    }
+    // .core .btn-container {
+    //     width: 600px;
+    // }
 
     .footer {
         padding-right: 2rem;

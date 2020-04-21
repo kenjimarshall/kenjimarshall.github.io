@@ -1,19 +1,20 @@
 ---
 layout: default
-title: Home
+title: welcome
 ---
+
 <main>
     <div class="container">
         <div class="header">
-            <h1 id="home-title">kenji's corner</h1>
+            <h1 class="home-title"></h1>
         </div>
         <div class="core">
-            <div class="img-container">
-                <a class="btn" href="{{ site.data.navigation[0].link }}">
-                    <img class = "eye" id="left-eye" src="assets/images/left-eye.png" onmouseover="this.src='assets/images/left-eye-closed.jpg'" onmouseout="this.src='assets/images/left-eye.png'">
+            <div class="btn-container">
+                <a class="btn" id="left-button" href="{{ site.data.navigation[0].link }}">
+                    <p class=type_button> fictions </p>
                 </a>
-                <a class="btn" href="{{ site.data.navigation[1].link }}">
-                    <img class = "eye" id="right-eye" src="assets/images/right-eye.png" onmouseover="this.src='assets/images/right-eye-closed.jpg'" onmouseout="this.src='assets/images/right-eye.png'">
+                <a class="btn" id="right-button" href="{{ site.data.navigation[1].link }}">
+                    <p class=type_button> projects </p>
                 </a>
             </div>
 
@@ -21,53 +22,3 @@ title: Home
         {% include footer.html %}
     </div>
 </main>
-<!-- <div class="vertical-flex container">
-    <div class="horizontal-flex flex-item core">
-        <div class="flex-item vertical-spacer">
-
-        </div>
-        <div class="vertical-flex flex-item center-column">
-            <div class="flex-item vertical-flex center">
-                <div class="vertical-flex flex-item text name">
-                    kenji
-                </div>
-               <!--  <div class="vertical-flex flex-item text subtitle">
-                    welcome to the website!
-                </div> -->
-                <!-- <div class="flex-item mini-spacer"></div>
-                <div class="horizontal-flex flex-item button-container">
-                    {% for item in site.data.navigation %}
-                        <a class=" vertical-flex button" href="{{ item.link }}" >
-                            {{ item.name }}
-                        </a>
-                    {% endfor %}
-                </div>
-                <div class="links"></div>
-            </div>
-        </div>
-        <div class="flex-item vertical-spacer"></div>
-    </div>
-  -->
-
-<!--
-        <div class="flex-item flex-column">
-            <div class="flex-item pane left-pane">
-                <a class="button left-button" href="{{ site.data.navigation[0].link }}">
-                    {{ site.data.navigation[0].name }}
-                </a>
-            </div>
-        </div>
-        <div class="flex-item flex-column">
-            <div class="flex-item pane right-top-pane">
-                <a class="button right-top-button" >
-                    {{ site.data.navigation[1].name }}
-                </a>
-            </div>
-            <div class="flex-item pane right-bottom-pane">
-                <a class="button right-bottom-button">
-                    {{ site.data.navigation[2].name }}
-                </a>
-            </div>
-        </div> -->
-
-</div>

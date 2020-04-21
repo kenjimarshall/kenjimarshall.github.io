@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Writing
+title: writing
 parent: /
 ---
 
@@ -10,17 +10,17 @@ parent: /
             {% include back.html %}
             <h1 class="title"> creative writing </h1>
         </div>
-        <div class="core">
-            <div class = "post-container">
+        <div class="core-subpage">
+            <div class="post-container">
                 {% for post in site.posts %}
-                    <div class="post">
-                        <h2>
-                            <a class = "post-link" href="{{ post.url }}">
-                                {{ post.title }}
-                            </a>
-                        </h2>
-                       <!--  <p> {{ post.excerpt }} </p> -->
-                    </div>
+                <div class="post">
+                    <h2>
+                        <a class="post-link" href="{{ post.url }}">
+                            {{ post.title }}
+                        </a>
+                    </h2>
+                    <!--  <p> {{ post.excerpt }} </p> -->
+                </div>
                 {% endfor %}
             </div>
         </div>
