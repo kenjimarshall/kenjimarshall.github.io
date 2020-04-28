@@ -10,10 +10,8 @@ function clickEffect(e) {
 
 document.addEventListener('click', clickEffect);
 
-
-
 $(document).ready(function () { //fade out
-    $("a").click(function (e) {
+    $(".nav-btn").click(function (e) {
         e.preventDefault();
         $link = $(this).attr("href");
         $(".container").fadeOut(200, function () {
