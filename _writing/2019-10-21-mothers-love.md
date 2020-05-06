@@ -1,7 +1,6 @@
 ---
 title: mother's love
 layout: post
-author: jill
 parent: /writing
 ---
 An apple is a sweet, edible fruit produced by an apple tree.

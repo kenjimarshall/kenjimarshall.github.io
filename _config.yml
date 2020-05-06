@@ -28,8 +28,13 @@ github_username:  kenjimarshall
 linkedin_username: kenjimarshall
 
 collections:
-  authors:
+  writing:
     output: true
+  projects:
+    output: true
+  privacypolicies:
+    output: true
+
 
 defaults:
   - scope:

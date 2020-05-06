@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: /writing
+parent: /projects
 ---
 
 <main>
@@ -15,6 +15,15 @@ parent: /writing
         <div class="prose">
 
             {{ content }}
+
+
+            {% for pp in site.privacypolicies %}
+            {% if pp.project == page.project %}
+            <a href={{ pp.url }}>Privacy Policy</a>
+            {% endif %}
+            {% endfor %}
+
+
         </div>
     </div>
 </main>

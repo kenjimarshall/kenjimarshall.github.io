@@ -1,7 +1,6 @@
 ---
 title: don't die butterfly
 layout: post
-author: ted
 parent: /writing
 ---
 Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible

@@ -12,16 +12,17 @@ parent: /
         </div>
         <div class="core-subpage">
             <div class="post-container">
-                {% for post in site.posts %}
+                {% for project in site.projects %}
                 <div class="post">
                     <h2>
-                        <a class="post-link nav-btn" href="{{ post.url }}">
-                            {{ post.title }}
+                        <a class="post-link nav-btn" href="{{ project.url }}">
+                            {{ project.title }}
                         </a>
                     </h2>
                     <!--  <p> {{ post.excerpt }} </p> -->
                 </div>
                 {% endfor %}
+
             </div>
         </div>
         {% include footer.html %}
