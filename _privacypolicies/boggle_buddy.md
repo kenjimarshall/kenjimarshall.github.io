@@ -11,17 +11,9 @@ Kenji Marshall built Boggle Buddy app as a free app. This service is provided by
 
 This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decides to use my app.
 
-If you choose to use my Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that I collect is used for providing and improving the Service. I will not use or share your information with anyone except as described in this Privacy Policy.
-
 **Information Collection and Use**
 
 While using our Service, I will not require you to provide us with any personally identifiable information.
-
-The app does use third party services that may collect information used to identify you.
-
-Link to privacy policy of third party service providers used by the app
-
-*   [Google Play Services](https://www.google.com/policies/privacy/)
 
 **Log Data**
 
@@ -29,7 +21,7 @@ I want to inform you that whenever you use my Service, in a case of an error in 
 
 **Links to Other Sites**
 
-This Service contains links to other sites -- specifically we link to definitions provided on Merriam-Webster Inc.  If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by me. Therefore, I strongly advise you to review the Privacy Policy of these websites. I have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
+This Service contains links to other sites -- specifically we link to definitions provided by Merriam-Webster Inc.  If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by me. Therefore, I strongly advise you to review the Privacy Policy of these websites. I have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
 
 **Children’s Privacy**
 
