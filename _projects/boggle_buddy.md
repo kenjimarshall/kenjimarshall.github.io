@@ -15,7 +15,7 @@ In order to validate any word, the North American Scrabble Players Association (
 
 We can speed up this process a little bit. If a branch of a DFS starts with XYZ, then there are no letters that could salvage this into a valid word. As such, the solver also stores all valid 3-letter prefixes in a separate hash set -- this way a hopeless branch can be put out of its misery early.
 
-**This solver is also hosted online at bogglecompanion.com as a simple Flask web application!** That repo is [here](https://github.com/kenjimarshall/boggle-companion).
+**This solver is also hosted online at [bogglecompanion.com](http://www.bogglecompanion.com) as a simple Flask web application!** That repo is [here](https://github.com/kenjimarshall/boggle-companion).
 
 # Optical Character Recognition
 
