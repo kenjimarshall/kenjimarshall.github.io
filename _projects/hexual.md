@@ -5,7 +5,7 @@ parent: /projects
 project: hexual
 ---
 
-Check out the code [here](https://github.com/kenjimarshall/Hexual). This project is built with a React frontend, Flask backend, and is connected to a MongoDB database. The application is available at hexual.ca.
+Check out the code [here](https://github.com/kenjimarshall/Hexual). The application is available at [hexual.ca](http://www.hexual.ca). This project is built with a React frontend, Flask backend, and is connected to a MongoDB database.
 
 # What is it?
 
