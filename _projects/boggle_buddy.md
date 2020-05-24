@@ -23,15 +23,17 @@ So how do we input the letters? It's a lot to ask of people to type in the 16 ti
 
 Tesseract is one the oldest players in the OCR game, originally developed at Hewlett-Packard by Ray Smith in the 1980s -- and it's been open sourced since 2005. [tess-two](https://github.com/rmtheis/tess-two) is a fork of Tesseract for Android.
 
-Now, it's not as simple as simply passing an image of a Boggle board to Tesseract and letting it do all the work. It's a powerful tool, but it needs clean data -- like white, clear text on a black screen. So we're going to have to get each tile into a legible format -- enter Open CV. Given an image of a Boggle board, we can pass it through a simple threshold to turn pixels above a certain value black, pixels below that value white. Here's an example of what I mean from the Open CV docs:
+Now, it's not as simple as simply passing an image of a Boggle board to Tesseract and letting it do all the work. It's a powerful tool, but it needs clean data -- like white, clear text on a black screen. So we're going to have to get each tile into a legible format -- enter Open CV. Given an image of a Boggle board, we can pass it through a simple threshold to turn pixels above a certain value one color, and pixels below that value another color. Here's an example of what I mean from the Open CV docs:
 
 ![image](/assets/images/threshold.png)
 
-Then Open CV can detect blobs of white (like the Boggle letters) as contours. So we run the contour detection algorithm, remove contours that are unreasonably large or small, and hopefully we've found the sixteen letters, like so:
+We want white letters on a black background, so we make dark pixels white, and light pixels black. This turns the white background of a Boggle tile black, and the letter in the middle white.
+
+Then Open CV can then detect blobs of white (like the Boggle letters) as something called a contour. So we run the contour detection algorithm, remove contours that are unreasonably large or small, and hopefully we've found the sixteen letters, like so:
 
 ![image](/assets/images/contour_example.png)
 
-To make this process more robust, all the candidate contours are arranged in two Binary Search Trees. In one, we use their x-coordinate interval as the key. In the other, we use their y-coordinate interval. With this, we can identify outlier contours (which aren't in the same row/column as any other). And even if we missed some letters, we can find the prevailing 4x4 grid structure of the contours.
+To make this process more robust, all the candidate contours are arranged in two binary search trees. In one, we use their x-coordinate interval as the key. In the other, we use their y-coordinate interval. With this, we can identify outlier contours (which aren't in the same row/column as any other). And even if we missed some letters, we can find the prevailing 4x4 grid structure of the contours.
 
 The last wrinkle is that some letters are going to be sideways or upside down. Luckily Tesseract's predictions come with a confidence score. We lean on this and run Tesseract on each character in all four possible orientations and take the prediction with the highest confidence. Since most letters have a height larger than their width, the predictions corresponding to those orientations are weighted a bit more heavily.
 
