@@ -6,7 +6,7 @@ parent: /writing
 
 _**Gone Underground**_
 
-I tucked myself beneath my bed, occupying my mind with the dusty clusters and clumps of cotton, protruding in obscure patterns from the bottom of the mattress. Sometimes I just needed somewhere to go. People saw the underbellies of mattresses in context—hiding in moments of fear, flipped upside down while moving, or transiently during item retrieval. I was here for that underbelly alone. I figured something unorthodox would help me think about things in a new way. But I just felt as if I was turning over obsidian stones in my hands, looking at it from every angle and met with unimpregnable blackness.
+I tucked myself beneath my bed, occupying my mind with the dusty clusters and clumps of cotton, protruding in obscure patterns from the bottom of the mattress. Sometimes I just needed somewhere to go. People saw the underbellies of mattresses in context—hiding in moments of fear, flipped upside down while moving, or transiently during item retrieval. I was here for that underbelly alone. I figured something unorthodox would help me think about things in a new way. But I just felt as if I was turning over the night sky in my hands, looking at it from every angle and met with unimpregnable blackness.
 
 I gave it ten more minutes before giving up and rolling myself free. It was morning on a summer Tuesday, and the air was blurry with humidity. I didn’t have anything to do until evening at which point, as always, I would go underground.
 
