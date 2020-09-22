@@ -23,8 +23,8 @@ email: kenji.marshall99@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Kenji's corner.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  kenjimarshall
+url: "http://kenjimarshall.com" # the base hostname & protocol for your site, e.g. http://example.com
+github_username: kenjimarshall
 linkedin_username: kenjimarshall
 
 collections:
@@ -34,7 +34,6 @@ collections:
     output: true
   privacypolicies:
     output: true
-
 
 defaults:
   - scope:
@@ -51,7 +50,6 @@ defaults:
       path: ""
     values:
       layout: "default"
-
 # Build settings
 # theme: minima
 # plugins:

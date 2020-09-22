@@ -1,468 +1,345 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+TC&display=swap");
 
-body { 
-    font-family: 'Times New Roman', serif; //default font for everything
-    margin: 0px;
-    background: white; //background of whole website
-    // cursor: url("../images/cursor.svg") 10 10, auto !important;
+body {
+  font-family: "Times New Roman", serif; //default font for everything
+  margin: 0px;
+  background: white; //background of whole website
 }
 
-a{
-    // cursor: url("../images/cursor.svg") 10 10, auto !important;
-
+body::-webkit-scrollbar {
+  //so no scrollbar ever appears for whole page
+  width: 0;
+  height: 0;
 }
 
-body::-webkit-scrollbar { //so no scrollbar ever appears for whole page
-    width: 0;
-    height: 0;
+.clickEffect {
+  position: fixed;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: none;
+  border: 0px solid black;
+  width: 20px;
+  height: 20px;
+  animation: clickEffect 1s ease-out;
+  -webkit-animation: clickEffect 1s ease-out;
+  z-index: 99999;
 }
 
+@keyframes clickEffect {
+  0% {
+    opacity: 1;
+  }
 
-.clickEffect{
-    position: fixed;
-    box-sizing: border-box;
-    border-radius: 50%;
-    background-color: none;
-    border: 0px solid black;
-    width: 20px;
-    height: 20px;
-    animation: clickEffect 1s ease-out;
-    -webkit-animation: clickEffect 1s ease-out;
-    z-index: 99999;
+  100% {
+    opacity: 0.2;
+  }
 }
 
-@keyframes clickEffect{
-    0%{
-        opacity: 1;
-    }
+@-webkit-keyframes clickEffect {
+  0% {
+    opacity: 1;
+  }
 
-    100% {
-        opacity: 0.2;
-    }
-}
-
-@-webkit-keyframes clickEffect{
-    0%{
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
+  100% {
+    opacity: 0;
+  }
 }
 
 main {
-    height: 100vh;
+  height: 100vh;
 }
 
-
-
-.container{ //div within main
-    height: 100%;
-    
+.container {
+  //div within main
+  height: 100%;
 }
-
 
 .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  height: 20%; //partition of space for header
+
+  h1 {
+    //titles for home and sub-pages
+    margin: 0;
+  }
+
+  .back-button {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+    margin-top: 1.2rem;
+    margin-left: 0.8rem;
+    margin-right: auto;
+    margin-bottom: auto;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .back-button:hover,
+  .back-button:active {
+    color: white;
+    background: black;
+  }
+}
+
+.core-subpage {
+  //For subpages; has width constraints
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65%; //partition of space for core
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.core {
+  //div to contain main content for each page
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65%; //partition of space for core
+
+  .btn-container {
+    //holds navigation buttons on home
+    // display: flex;
+    position: relative;
+    width: 29ch; //got through just guess and check....
+    height: 50%;
+    // justify-content: space-between;
+  }
+
+  .btn {
+    //naviation buttons on home
+    position: absolute;
+    display: inline;
+    text-decoration: none;
+    font-family: "Courier New", Courier, monospace; //need monospace for animation
     text-align: center;
-    height: 20%; //partition of space for header
+    color: black;
+  }
 
-    h1 { //titles for home and sub-pages
-        margin: 0;
-    }
+  #left-button {
+    margin-left: 0ch;
+  }
 
-    .back-button {
-        font-size: 1.5rem;
-        text-decoration: none;
-        color: black;
-        margin-top: 1.2rem;
-        margin-left: 0.8rem;
-        margin-right: auto;
-        margin-bottom: auto;
-        padding: 0.3rem 0.8rem;
-    }
+  #right-button {
+    margin-left: 16ch;
+  }
 
-    .back-button:hover, .back-button:active {
-        color: white;
-        background: black;
-    }
-
-    
+  .type_button:hover {
+    font-weight: 1000;
+    color: white;
+    background: black;
+    border-right-color: black;
+  }
 }
-
-
-.core-subpage{ //For subpages; has width constraints
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height:65%; //partition of space for core
-    margin: 0 auto;
-    max-width: 600px;
-}
-
-.core { //div to contain main content for each page
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height:65%; //partition of space for core
-
-    .btn-container { //holds navigation buttons on home
-        // display: flex;
-        position: relative;
-        width: 29ch; //got through just guess and check.... doesn't really make
-        height: 50%;
-        // justify-content: space-between;
-    }
-
-    .btn {//naviation buttons on home
-        position: absolute;
-        display: inline;
-        text-decoration: none;
-        font-family: 'Courier New', Courier, monospace; //need monospace for animation
-        text-align: center;
-        color: black;
-
-        
-
-
-
-
-        .type_button{ //styling for animation
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: 2.5px solid black; //add to media
-            -webkit-animation:  typed 5s steps(8);
-            animation: typed 5s steps(8);
-            -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-            width: 0ch;
-        }
-    }
-
-    #left-button{
-        margin-left: 0ch;
-    }
-
-    #right-button{
-        margin-left: 16ch;
-    }
-
-    
-    
-    @-webkit-keyframes typed {
-        0% {
-            width: 0ch;
-        }
-
-        50% {
-            width: 8ch;
-        }
-
-        40% {
-            border-right: 2.5px solid white;;
-        }
-
-        
-        45% {
-            border-right:  2.5px solid black;
-        }
-
-
-        50% {
-            border-right: 2.5px solid white;;
-        }
-
-        55% {
-            border-right: 2.5px solid black;
-        }
-
-        
-        85% {
-            width: 8ch;
-        }
-
-        95%{
-            width: 0ch;
-        }
-
-        
-    }
-
-    @keyframes typed {
-        0% {
-            width: 0ch;
-        }
-
-        30% {
-            width: 8ch;
-            border-right: 2.5px solid black;
-        }
-
-        38%{
-            width: 8ch;
-            border-right: 2.5px solid white;
-        }
-
-        46%{
-            width: 8ch;
-            border-right: 2.5px solid black;
-        }
-
-        54%{
-            width: 8ch;
-            border-right: 2.5px solid white;
-        }
-
-        62%{
-            width: 8ch;
-            border-right: 2.5px solid black;
-        }
-
-        70%{
-            width: 8ch;
-            border-right: 2.5px solid white;
-        }
-
-        78%{
-            width: 8ch;
-            border-right: 2.5px solid black;
-        }
-
-        86%{
-            width: 8ch;
-            border-right: 2.5px solid white;
-        }
-
-        94%{
-            width: 8ch;
-            border-right: 2.5px solid black;
-        }
-
-        
-    }
-
-    .type_button:hover{
-        font-weight: 1000;
-        color: white;
-        background: black;
-        border-right-color: black;;
-    }
-
-    
-}
-
 
 .footer {
-    height: 15%; //space partition for footer
+  height: 15%; //space partition for footer
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; //push to right
+  align-items: center;
+
+  .dropdown {
+    //contains whole dropdown interface
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end; //push to right
+    align-items: center;
+    height: 50%;
+  }
+
+  .drop-content {
+    //the actual links
+    display: none;
+    // display: flex;
+    // align-items: center;
+    height: 100%;
+  }
+
+  .drop-btn {
+    //the control button
+    background-color: black;
+    height: 30px;
+    width: 30px;
+  }
+
+  .dropdown:hover .drop-content {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    //animations on the actual logo
+    margin-right: 2rem;
+    height: 100%;
+
+    display: flex;
     align-items: center;
 
-    .dropdown{ //contains whole dropdown interface
-        display: flex;
-        align-items: center;
-        height: 50%;
-    }
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
 
-    .drop-content{ //the actual links
-        display: none;
-        // display: flex;
-        // align-items: center;
-        height: 100%;
-    }
-
-    .drop-btn { //the control button
-        background-color: black;
-        height: 30px;
-        width: 30px;
-    }
-
-    .dropdown:hover .drop-content {
-        display: flex;
-        align-items: center;
-    }
-
-    .logo { //animations on the actual logo
-        margin-right: 2rem;
-        height: 100%;
-
-        display:flex;
-        align-items: center;
-
-        -webkit-transition-duration: 0.3s;
-        transition-duration: 0.3s;
-        -webkit-transition-property: transform;
-        transition-property: transform;
-        -webkit-transition-timing-function: ease-out;
-        transition-timing-function: ease-out;
-    }
-
-      .logo:hover, .logo:active{
-        -webkit-transform: translateY(-8px);
-        transform: translateY(-8px);
-      }
-
+  .logo:hover,
+  .logo:active {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
 }
 
+.post-container {
+  //holds links in subpages
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 3rem;
+  align-items: center;
+  overflow-y: scroll;
+  height: 65%;
+  width: 80%;
 
-.post-container { //holds links in subpages
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 3rem;
-    align-items: center;
-    overflow-y: scroll;
-    height: 65%;
+  .post {
     width: 80%;
+    margin: 0.3rem 0;
 
-    .post {
-        width: 80%;
-        margin: 0.3rem 0;
-        
-
-        h2 {
-            text-align: center;
-            font-size: 1rem;
-        }
-
-        .post-link {
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 500;
-            color: black;
-            padding: .3rem .5rem;
-            
-        }
-
-        .post-link:hover, .post-link:active{
-            font-weight: 1000;
-            color: white;
-            background: black;
-        }
-
+    h2 {
+      text-align: center;
+      font-size: 1rem;
     }
+
+    .post-link {
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      color: black;
+      padding: 0.3rem 0.5rem;
+    }
+
+    .post-link:hover,
+    .post-link:active {
+      font-weight: 1000;
+      color: white;
+      background: black;
+    }
+  }
 }
 
-
-.post-container::-webkit-scrollbar{
-	width: 0px; //increase to see the styling below
+.post-container::-webkit-scrollbar {
+  width: 0px; //increase to see the styling below
 }
 
-.post-container::-webkit-scrollbar-track-piece{
-	background-color: #FFF;
+.post-container::-webkit-scrollbar-track-piece {
+  background-color: #fff;
 }
 
-.post-container::-webkit-scrollbar-thumb{
-	background-color: gray;
-	// outline: 2px solid #FFF;
-	outline-offset: -2px;
-    border: .1px solid gray;
-    border-radius: 100px;
+.post-container::-webkit-scrollbar-thumb {
+  background-color: gray;
+  // outline: 2px solid #FFF;
+  outline-offset: -2px;
+  border: 0.1px solid gray;
+  border-radius: 100px;
 }
 
-.post-container::-webkit-scrollbar-thumb:hover{
-	background-color: black;
+.post-container::-webkit-scrollbar-thumb:hover {
+  background-color: black;
 }
 
+.prose {
+  //text size modified in media queries
+  padding-top: 1.5rem;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  font-size: 14px;
+  max-width: 800px;
 
-
-
-
-
-
-.prose { //text size modified in media queries
-    padding-top: 1.5rem;
-    padding-bottom: 4rem;
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin: auto;
-    font-size: 14px;
-    max-width: 800px;
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 60%;
+    height: auto;
+  }
 }
-
 
 // 450 px
 
-@media screen and (min-width: 300px){
-    .core .btn-container{
-        font-size: 1.1em;
-    }
+@media screen and (min-width: 300px) {
+  .core .btn-container {
+    font-size: 1.1em;
+  }
 
-    // .core .btn-container {
-    //     width: 250px;
-    // }
-
+  // .core .btn-container {
+  //     width: 250px;
+  // }
 }
 
 @media screen and (min-width: 450px) {
-    .core .btn-container{
-        font-size: 1.8em;
-    }
+  .core .btn-container {
+    font-size: 1.8em;
+  }
 
-    .prose {
-        font-size: 18px;
-    }
+  .prose {
+    font-size: 18px;
+  }
 
-    .header .home-title {
-        font-size: 5em;
-    }
+  .header .home-title {
+    font-size: 5em;
+  }
 
-    .header .title {
-        font-size: 2.5em
-    }
+  .header .title {
+    font-size: 2.5em;
+  }
 
-    // .core .btn-container {
-    //     width: 400px;
-    // }
+  // .core .btn-container {
+  //     width: 400px;
+  // }
 
-    .footer {
-        padding-right: 1rem;
-    }
+  .footer {
+    padding-right: 1rem;
+  }
 
-
-    .post-container .post .post-link {
-        font-size: 22px;
-    }
+  .post-container .post .post-link {
+    font-size: 22px;
+  }
 }
 
-
 @media screen and (min-width: 700px) {
-    .core .btn-container{
-        font-size: 3em;
-    }
+  .core .btn-container {
+    font-size: 3em;
+  }
 
-    .prose {
-        font-size: 20px;
-    }
-    .header .home-title {
-        font-size: 6em;
-    }
+  .prose {
+    font-size: 20px;
+  }
+  .header .home-title {
+    font-size: 6em;
+  }
 
-    .header .title {
-        font-size: 3em
-    }
+  .header .title {
+    font-size: 3em;
+  }
 
-    // .core .btn-container {
-    //     width: 600px;
-    // }
+  // .core .btn-container {
+  //     width: 600px;
+  // }
 
-    .footer {
-        padding-right: 2rem;
-    }
-
-
-
+  .footer {
+    padding-right: 2rem;
+  }
 }
 
 @media screen and (min-width: 900px) {
-    .prose {
-        font-size: 22px;
-    }
+  .prose {
+    font-size: 22px;
+  }
 }

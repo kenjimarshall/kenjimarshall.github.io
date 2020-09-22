@@ -1,5 +1,5 @@
 ---
-title: an inky river
+title: ink river
 layout: post
 parent: /writing
 ---

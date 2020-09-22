@@ -2,7 +2,6 @@
 title: Boggle Buddy
 layout: privacypolicy
 parent: /projects/boggle_buddy
-project: boggle_buddy
 ---
 
 **Privacy Policy**
@@ -21,7 +20,7 @@ I want to inform you that whenever you use my Service, in a case of an error in 
 
 **Links to Other Sites**
 
-This Service contains links to other sites -- specifically we link to definitions provided by Merriam-Webster Inc.  If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by me. Therefore, I strongly advise you to review the Privacy Policy of these websites. I have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
+This Service contains links to other sites -- specifically we link to definitions provided by Merriam-Webster Inc. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by me. Therefore, I strongly advise you to review the Privacy Policy of these websites. I have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
 
 **Children’s Privacy**
 

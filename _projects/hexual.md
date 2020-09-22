@@ -1,5 +1,5 @@
 ---
-title: Hexual
+title: hexual
 layout: project
 parent: /projects
 project: hexual
@@ -9,7 +9,7 @@ Check out the code [here](https://github.com/kenjimarshall/Hexual). The applicat
 
 # What is it?
 
-As the saying goes, _always judge an album by its cover._ Personally, I think that album artwork is as integral to a record's artistic statement as the music itself. It's the imagery you internally link to the sound, and the main opportunity to represent the music via a different medium. Hexual is an an effort to explore music through this lens.
+As the saying goes, _always judge an album by its cover._ I do think album artwork is an integral to a record's artistic statement. It's the imagery you internally link to the sound, and the main opportunity to represent the music via a different medium. Hexual is an an effort to explore music through this lens. This idea was inspired by the effort I went through to come up with aesthetically pleasing and cohesive wall displays of my favorite records. If you're ever in this situation, perhaps wanting to base your interior design choices off the gorgeously warm palette of Radiohead's In Rainbows, this is the place to be!
 
 At its core, Hexual is a database of over 700,000 unique albums and their color palette. I provide tools on the hexual website to freely explore this database.
 
@@ -21,11 +21,9 @@ To do so, I wrote a script to go through each file, parse the artist name from t
 
 # Colours!
 
-**K-Means clustering** was used to calculate each album's palette. K-Means is an unsupervised learning algorithm that attempts to segment data into K clusters. First, K points are randomly initialized in the feature space. These points are called the **centroids**. At each iteration, every data point is assigned to its closest centroid. This defines a centroid's **neighborhood**. Then, we go through each centroid and its position is updated to the _mean position of its neighborhood_. However, by changing this position, some points may enter the neighborhood while others will leave.
+**K-Means clustering** was used to calculate each album's palette. K-Means is an unsupervised learning algorithm that attempts to segment data into K clusters. First, K points are randomly initialized in the feature space. These points are called the **centroids**. At each iteration, every data point is assigned to its closest centroid. This defines a centroid's **neighborhood**.
 
-But _by repeating this process over and over, we'll end up with K different neighborhoods that naturally segment the data._
-
-For example, let's say we have an album cover with a lot of red pixels, and a lot of blue pixels. If we use 2 centroids, we'd expect to divide the image into a red neighborhood and a blue neighborhood.
+At each iteration of the clustering algorithm, we go through each centroid and its position is updated to the _mean position of its neighborhood_. When this position is updated, some points may enter the neighborhood while others will leave. And by repeating this process over and over, we end up with K different neighborhoods that naturally segment the data. For example, let's say we have an album cover with a lot of red pixels, and a lot of blue pixels. If we use 2 centroids, we'd expect to divide the image into a red neighborhood and a blue neighborhood.
 
 You're probably familiar with using RGB to represent images, wherein each pixel is defined by its level of redness, blueness, and greenness. Simple. For hexual, I wanted people to be able to search a color on our database, and return all albums that match that color, or are imperceptibly different.
 
@@ -35,7 +33,7 @@ Naturally, color similarity might be quantified by how close two colors are in t
 
 Here's an illustration:
 
-![image](/assets/images/rgb_comparison.png)
+<img src="/assets/images/rgb_comparison.png" alt="rgb_comparison"/>
 
 _These two pairs are the same distance away in RGB, but the bottom pair looks way more different than the top pair!_
 
@@ -51,7 +49,7 @@ Great. So for each album, we convert its artwork to LAB, then use K-Means to fin
 
 Here's an example using Boards of Canada's album Tomorrow's Harvest:
 
-![image](/assets/images/example_palette.png)
+<img src="/assets/images/example_palette.png" alt="example_palette"/>
 
 # Hexual
 
@@ -59,7 +57,7 @@ The website itself is built on a MongoDB, Flask, and React tech stack. It has th
 
 ### Palette
 
-Choose up to four colours, and search the database for albums that perfectly match all the specified colours (i.e. aren't perceptibly different), or match all but one of the colours in case none of the perfect matches are satisfactory.
+Choose up to four colours, and search the database for albums that perfectly match all the specified colours (i.e. aren't perceptibly different), or match all but one of the colours in case none of the perfect matches are satisfactory. In this mode you can also upload your own image and its color palette will be automatically generated for easy searching. You can also filter any search's output by genre.
 
 ### Search
 
@@ -69,4 +67,4 @@ Search for any artist or album to see if it's in our collection.
 
 Choose a genre (from Spotify's exhaustive list including grunge, art rock, conscious hip-hop, and more) and 1000 randomly selected albums and their palettes will be displayed to you.
 
-That's all, thanks!
+That's all! Thanks!
