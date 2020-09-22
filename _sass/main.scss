@@ -97,44 +97,42 @@ main {
 }
 
 .core {
-  //div to contain main content for each page
-  display: flex;
+  //div to contain main content on homepage
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "a00 a01 a02 a03"
+    "a10 a11 a12 a13"
+    "a20 a21 a22 a23";
   justify-content: center;
   align-items: center;
   height: 65%; //partition of space for core
 
-  .btn-container {
-    //holds navigation buttons on home
-    // display: flex;
-    position: relative;
-    width: 29ch; //got through just guess and check....
-    height: 50%;
-    // justify-content: space-between;
-  }
-
-  .btn {
-    //naviation buttons on home
-    position: absolute;
-    display: inline;
+  .nav-btn {
+    //navigation buttons on home
     text-decoration: none;
-    font-family: "Courier New", Courier, monospace; //need monospace for animation
     text-align: center;
     color: black;
   }
 
-  #left-button {
-    margin-left: 0ch;
+  .nav-btn-text {
+    display: inline-block;
+    margin: 0;
   }
 
-  #right-button {
-    margin-left: 16ch;
+  #nav0 {
+    grid-area: a02;
   }
 
-  .type_button:hover {
+  #nav1 {
+    grid-area: a21;
+  }
+
+  .nav-btn-text:hover {
     font-weight: 1000;
     color: white;
     background: black;
-    border-right-color: black;
   }
 }
 
@@ -274,18 +272,14 @@ main {
 // 450 px
 
 @media screen and (min-width: 300px) {
-  .core .btn-container {
+  .nav-btn-text {
     font-size: 1.1em;
   }
-
-  // .core .btn-container {
-  //     width: 250px;
-  // }
 }
 
 @media screen and (min-width: 450px) {
-  .core .btn-container {
-    font-size: 1.8em;
+  .nav-btn-text {
+    font-size: 1.5em;
   }
 
   .prose {
@@ -300,10 +294,6 @@ main {
     font-size: 2.5em;
   }
 
-  // .core .btn-container {
-  //     width: 400px;
-  // }
-
   .footer {
     padding-right: 1rem;
   }
@@ -314,8 +304,8 @@ main {
 }
 
 @media screen and (min-width: 700px) {
-  .core .btn-container {
-    font-size: 3em;
+  .nav-btn-text {
+    font-size: 2em;
   }
 
   .prose {
@@ -328,10 +318,6 @@ main {
   .header .title {
     font-size: 3em;
   }
-
-  // .core .btn-container {
-  //     width: 600px;
-  // }
 
   .footer {
     padding-right: 2rem;

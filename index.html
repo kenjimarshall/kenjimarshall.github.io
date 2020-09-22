@@ -9,22 +9,14 @@ title: welcome
       <h1 class="home-title"></h1>
     </div>
     <div class="core">
-      <div class="btn-container">
-        <a
-          class="btn nav-btn"
-          id="left-button"
-          href="{{ site.data.navigation[0].link }}"
-        >
-          <p class="type_button">writings</p>
-        </a>
-        <a
-          class="btn nav-btn"
-          id="right-button"
-          href="{{ site.data.navigation[1].link }}"
-        >
-          <p class="type_button">projects</p>
-        </a>
-      </div>
+      <!-- <div class="btn-container"> -->
+      <a class="nav-btn" id="nav0" href="{{ site.data.navigation[0].link }}">
+        <p class="nav-btn-text">writing</p>
+      </a>
+
+      <a class="nav-btn" id="nav1" href="{{ site.data.navigation[1].link }}">
+        <p class="nav-btn-text">coding</p>
+      </a>
     </div>
     {% include footer.html %}
   </div>
