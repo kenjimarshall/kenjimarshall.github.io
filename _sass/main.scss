@@ -97,17 +97,20 @@ main {
   //div to contain main content on homepage
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   grid-template-areas:
     "a00 a01 a02 a03"
     "a10 a11 a12 a13"
-    "a20 a21 a22 a23";
+    "a20 a21 a22 a23"
+    "a30 a31 a32 a33"
+    "a40 a41 a42 a43";
   justify-content: center;
   align-items: center;
   height: 65%; //partition of space for core
 
   .nav-btn {
     //navigation buttons on home
+    visibility: hidden;
     text-decoration: none;
     text-align: center;
     color: black;
@@ -118,13 +121,13 @@ main {
     margin: 0;
   }
 
-  #nav0 {
-    grid-area: a02;
-  }
+  //   #nav0 {
+  //     grid-area: a02;
+  //   }
 
-  #nav1 {
-    grid-area: a21;
-  }
+  //   #nav1 {
+  //     grid-area: a21;
+  //   }
 
   .nav-btn-text:hover {
     font-weight: 1000;
@@ -271,6 +274,10 @@ main {
 @media screen and (min-width: 300px) {
   .nav-btn-text {
     font-size: 1.1em;
+  }
+
+  .footer {
+    padding-right: 1rem;
   }
 }
 
