@@ -110,7 +110,7 @@ main {
 
   .nav-btn {
     //navigation buttons on home
-    visibility: hidden;
+    // visibility: hidden;
     text-decoration: none;
     text-align: center;
     color: black;
@@ -121,13 +121,13 @@ main {
     margin: 0;
   }
 
-  //   #nav0 {
-  //     grid-area: a02;
-  //   }
+  #nav0 {
+    grid-area: a02;
+  }
 
-  //   #nav1 {
-  //     grid-area: a21;
-  //   }
+  #nav1 {
+    grid-area: a21;
+  }
 
   .nav-btn-text:hover {
     font-weight: 1000;
