@@ -9,7 +9,7 @@ Check out the code [here](https://github.com/kenjimarshall/Hexual). The applicat
 
 # What is it?
 
-As the saying goes, _always judge an album by its cover._ I do think album artwork is an integral to a record's artistic statement. It's the imagery you internally link to the sound, and the main opportunity to represent the music via a different medium. Hexual is an an effort to explore music through this lens. This idea was inspired by the effort I went through to come up with aesthetically pleasing and cohesive wall displays of my favorite records. If you're ever in this situation, perhaps wanting to base your interior design choices off the gorgeously warm palette of Radiohead's In Rainbows, this is the place to be!
+As the saying goes, _always judge an album by its cover._ I do think album artwork is integral to a record's artistic statement. It's the imagery you internally link to the sound, and the main opportunity to represent the music via a different medium. Hexual is an an effort to explore music through this lens. This idea was inspired by the effort I went through to come up with aesthetically pleasing and cohesive wall displays of my favorite records. If you're ever in this situation, perhaps wanting to base your interior design choices off the gorgeously warm palette of Radiohead's In Rainbows, this is the place to be!
 
 At its core, Hexual is a database of over 700,000 unique albums and their color palette. I provide tools on the hexual website to freely explore this database.
 
